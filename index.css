@@ -1,0 +1,307 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+End reset of CSS
+
+
+*/
+
+body {
+  background-image: url("images/background-image.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: url("images/18888.png"), auto;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+#contact-us {
+  min-height: 35px;
+  min-width: 70px;
+}
+
+div.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.profile-picture {
+  border-radius: 50%;
+  border: 2px solid #1da1f2;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+img.pfp {
+  max-width: 150px;
+
+  animation-name: move;
+  animation-duration: 2s;
+}
+
+#header {
+  max-width: 600px;
+  min-width: 300px;
+  animation-name: left;
+  animation-duration: 2s;
+}
+
+#subscribe {
+  margin-bottom: 30px;
+  max-width: 300px;
+  min-width: 210px;
+  animation-name: right;
+  animation-duration: 2s;
+}
+
+div.link-buttons-container {
+  width: 600px;
+}
+
+div.link-row {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+
+img.btn-image {
+  max-width: 115px;
+  border-radius: 50%;
+  animation-name: down;
+  animation-duration: 2s;
+}
+
+/* img {
+    animation-name: move;
+} */
+
+@keyframes move {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes left {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes down {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("images/background_cellphone.png");
+  }
+
+  nav {
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+  }
+
+  img.pfp {
+    max-width: 75px;
+  }
+
+  div.profile-picture {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 15px;
+  }
+
+  #header {
+    margin-bottom: 10px;
+  }
+
+  #subscribe {
+    margin-bottom: 15px;
+  }
+
+  div.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.link-buttons-container {
+    width: 280px;
+  }
+
+  div.link-row {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  img.btn-image {
+    max-width: 82px;
+  }
+
+  img.btn-image:hover {
+    cursor: pointer;
+  }
+}
